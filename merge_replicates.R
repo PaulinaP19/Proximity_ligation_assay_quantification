@@ -1,4 +1,4 @@
-#merge replicates
+#merge replicates and draw a boxplot
 #chose directory containing your data
 setwd("/Volumes/CCHL-User/Paulina/03_Tipin_Timeless/00000001_PLA/PLA_PCNA_Tim_publication/combined")
 library(ggplot2)

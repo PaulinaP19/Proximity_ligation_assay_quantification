@@ -12,7 +12,7 @@ for (f in boxplots){
   merged <- as.data.frame(rbind(merged, data))
 }
   sufix <- str_extract(boxplots[1], "_(.*)")
-  fileN <- paste0("merge_",  sufix)
+  fileN <- paste0("merge",  sufix)
   write.table(merged, file= fileN, row.names = FALSE, sep = "\t")
   
   filenm <- sub(".txt", ".pdf", fileN)

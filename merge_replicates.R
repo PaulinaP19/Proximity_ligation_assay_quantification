@@ -23,8 +23,8 @@ for (f in boxplots){
  
   
   level_orderX <- c("Sp_Ctrl", "Sp_HU", "Sp_APH", "NSp_Ctrl", "NSp_HU", "NSp_APH")
-  p <- ggplot(merged, aes(fill=name, y=Count, x=factor(name, level=level_orderX))) + geom_boxplot(outlier.shape = NA) + theme_bw() + scale_fill_discrete(breaks=level_orderX)  
-  # create the file!
+  p <- ggplot(merged, aes(fill=name, y=Count, x=factor(name, level=level_orderX))) + geom_boxplot(outlier.shape = NA) + theme_bw() + scale_fill_discrete(breaks=level_orderX) ++ theme_bw() + scale_fill_discrete(breaks=level_orderX) + labs( x = "Condition", y = "Count")  
+  # save the graph
   print(p)
   dev.off()
   
